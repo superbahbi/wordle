@@ -30,4 +30,20 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2.5em;
+  color: #fff;
+}
+
+.row>div.green {
+  background: #4f864a;
+  background-color: #4f864a;
+}
+
+.row>div.yellow {
+  background: #e2cc68;
+  background-color: #e2cc68;
+}
+
+.row>div.grey {
+  background: #a1a1a1;
+  background-color: #a1a1a1;
 }
