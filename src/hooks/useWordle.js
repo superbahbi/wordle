@@ -4,15 +4,46 @@ const useWordle = (solution) => {
 
     const [turn, setTurn] = useState(0)
     const [currentGuess, setCurrentGuess] = useState('')
-    const [guesses, setGuesses] = useState([]) // each guess is an array
-    const [history, setHistory] = useState(['hello']) // each guess is a string
+    const [guesses, setGuesses] = useState([...Array(6)]) // each guess is an array
+    const [history, setHistory] = useState([]) // each guess is a string
     const [isCorrect, setIsCorrect] = useState(false)
 
+    // Format key with color green, yellow, grey
     const formatGuess = () => {
-        console.log("formatting guess - ", currentGuess)
+        let solutionArray = [...solution]
+        let formattedGuess = [...currentGuess].map(((l) => {
+            return { key: l, color: "grey" }
+        }))
+        formattedGuess.forEach((l, i) => {
+            if (solutionArray[i] === l.key) {
+                formattedGuess[i].color = "green"
+                solutionArray[i] = null
+            }
+        })
+        formattedGuess.forEach((l, i) => {
+            if (solutionArray.includes(l.key) && l.color !== "green") {
+                formattedGuess[i].color = "yellow"
+                solutionArray[solutionArray.indexOf(l.key)] = null
+            }
+        })
+        return formattedGuess
     }
-    const addNewGuess = () => {
-
+    const addNewGuess = (formattedGuess) => {
+        if (currentGuess === solution) {
+            setIsCorrect(true)
+        }
+        setGuesses((prevGuesses) => {
+            let newGuesses = [...prevGuesses]
+            newGuesses[turn] = formattedGuess
+            return newGuesses
+        })
+        setHistory((prevHistory) => {
+            return [...prevHistory, currentGuess]
+        })
+        setTurn((prevTurn) => {
+            return prevTurn + 1
+        })
+        setCurrentGuess('')
     }
     const handleKeyUp = ({ key }) => {
         if (key === 'Enter') {
@@ -27,11 +58,11 @@ const useWordle = (solution) => {
                 return
             }
             // check word is 5 chars long
-            if(currentGuess.length !== 5){
+            if (currentGuess.length !== 5) {
                 console.log("word must be 5 chars long")
                 return
             }
-            formatGuess()
+            addNewGuess(formatGuess())
         }
         if (key === "Backspace") {
             setCurrentGuess((prev) => {
