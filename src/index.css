@@ -86,6 +86,24 @@ h1 {
   line-height: 50px;
 }
 
+.keypad>div.green {
+  background: #4f864a;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.keypad>div.yellow {
+  background: #b59f3b;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.keypad>div.grey {
+  background: #3a3a3c;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
 @keyframes flip {
   0% {
     transform: rotateX(0);
