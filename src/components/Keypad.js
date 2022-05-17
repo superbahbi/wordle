@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react'
-
+import React, { useState } from 'react'
+import data from "../data/db.json"
 export default function Keypad({ usedKeys }) {
-    const [letters, setLetters] = useState(null)
+    const [letters, setLetters] = useState(data.letters)
 
-    useEffect(() => {
-        fetch('http://localhost:3001/letters')
-            .then(res => res.json())
-            .then(json => {
-                setLetters(json)
-            })
-    }, [])
     return (
         <div className="keypad">
             {letters && letters.map(l => {
