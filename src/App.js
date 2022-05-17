@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Wordle from "./components/Wordle";
 
 function App() {
-  const [solution, setSolution] = useState(null)
+  const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    const data = [ {"id": 1, "word": "edgar"}]
+    const data = [{ "id": 1, "word": "edgar" }]
     const randomSolution = data[Math.floor(Math.random() * data.length)]
     setSolution(randomSolution.word)
   }, [setSolution]);
@@ -15,5 +15,5 @@ function App() {
       {solution && <Wordle solution={solution} />}
     </div>
   );
-}
+};
 export default App;
