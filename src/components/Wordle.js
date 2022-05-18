@@ -23,9 +23,13 @@ export default function Wordle({ solution }) {
     }, [handleKeyUp, isCorrect, turn])
 
     return (
-        <div>
-            <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
-            <Keypad usedKeys={usedKeys} />
+        <div className="game">
+            <h1>Wordle</h1>
+            <div className="board" >
+                <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
+            </div>
+
+            <Keypad usedKeys={usedKeys} onClick={(key) => handleKeyUp({ key })} />
             {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
         </div>
     )

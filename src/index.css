@@ -13,6 +13,24 @@ h1 {
   color: #333;
 }
 
+.game {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-betwee;
+  height: 100vh;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 .row {
   text-align: center;
   display: flex;
@@ -34,20 +52,20 @@ h1 {
 }
 
 .row>div.green {
-  --background: #4f864a;
-  --border-color: #4f864a;
+  --background: #6aaa64;
+  --border-color: #6aaa64;
   animation: flip 0.5s ease forwards;
 }
 
 .row>div.yellow {
-  --background: #b59f3b;
-  --border-color: #b59f3b;
+  --background: #c9b458;
+  --border-color: #c9b458;
   animation: flip 0.5s ease forwards;
 }
 
 .row>div.grey {
-  --background: #3a3a3c;
-  --border-color: #3a3a3c;
+  --background: #787c7e;
+  --border-color: #787c7e;
   animation: flip 0.5s ease forwards;
 }
 
@@ -73,33 +91,36 @@ h1 {
 
 .keypad {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto 8px;
 }
 
-.keypad>div {
-  margin: 5px;
+.keypad>button {
+  margin: 0 6px 8px 0;
+  padding: 0;
   width: 40px;
-  height: 50px;
-  background: #eee;
-  display: inline-block;
-  border-radius: 6px;
-  line-height: 50px;
+  height: 58px;
+  background: #d3d6da;
+  display: inline-table;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-.keypad>div.green {
-  background: #4f864a;
+.keypad>button.green {
+  background: #6aaa64;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 
-.keypad>div.yellow {
-  background: #b59f3b;
+.keypad>button.yellow {
+  background: #c9b458;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 
-.keypad>div.grey {
-  background: #3a3a3c;
+.keypad>button.grey {
+  background: #787c7e;
   color: #fff;
   transition: all 0.3s ease-in;
 }
