@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import data from "../data/db.json"
 export default function Keypad({ usedKeys, onClick }) {
-    // const [letters, setLetters] = useState(data.letters)
     const letters = [
         [{ "key": "q" },
         { "key": "w" },
