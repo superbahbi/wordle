@@ -159,15 +159,14 @@ h1 {
 }
 
 .keyboard {
-  text-align: center;
-  font-size: 14px;
   font-family: sans-serif;
+  flex-shrink: 0;
 }
 
 .keyboard__row {
-  display: inline-block;
-  height: 3em;
-  margin: 0.2em;
+  display: flex;
+  height: 3.5em;
+  margin: 2px;
 }
 
 .keyboard__row>* {
@@ -176,30 +175,19 @@ h1 {
   color: #333;
   float: left;
   border-radius: 0.3em;
-  margin: 0.2em;
-  padding: 0.2em;
+  margin: 2px;
+  padding: 2px;
   width: 40px;
   height: 100%;
   box-sizing: border-box;
   cursor: pointer;
-  -webkit-user-select: none;
   text-transform: uppercase;
   border: 0;
-  /* box-shadow: 0 0.2em 0 0.05em #222; */
-  /* border-bottom-color: #555; */
+  -webkit-user-select: none;
 }
 
 .key--w3 {
   width: 4.6em;
-  line-height: 2.8em;
-}
-
-.key--letter {
-  line-height: 2.8em;
-}
-
-.keyboard>.keyboard__row {
-  text-align: center;
 }
 
 .keyboard__row>button.green {

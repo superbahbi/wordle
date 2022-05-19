@@ -41,7 +41,7 @@ export default function Keypad({ usedKeys, onClick }) {
                         letters && letters[0].map(l => {
                             const color = usedKeys[l.key]
                             return (
-                                <button onClick={() => onClick(l.key)} key={l.key} className={`key--letter ${color}`}>{l.icon ? l.icon : l.key}</button>
+                                <button onClick={() => onClick(l.key)} key={l.key} className={color}>{l.icon ? l.icon : l.key}</button>
                             )
                         })
                     }
@@ -51,7 +51,7 @@ export default function Keypad({ usedKeys, onClick }) {
                         letters && letters[1].map(l => {
                             const color = usedKeys[l.key]
                             return (
-                                <button onClick={() => onClick(l.key)} key={l.key} className={`key--letter ${color}`}>{l.icon ? l.icon : l.key}</button>
+                                <button onClick={() => onClick(l.key)} key={l.key} className={color}>{l.icon ? l.icon : l.key}</button>
                             )
                         })
                     }
