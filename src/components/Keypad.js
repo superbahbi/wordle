@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import data from "../data/db.json"
+import React from 'react'
 export default function Keypad({ usedKeys, onClick }) {
     const letters = [
         [{ "key": "q" },
