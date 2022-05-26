@@ -3,10 +3,11 @@ import useWordle from '../hooks/useWordle';
 import Grid from './Grid';
 import Keypad from './Keypad';
 import Modal from './Modal';
-
+import Toast from './Toast';
 export default function Wordle({ solution }) {
-    const { currentGuess, guesses, isCorrect, turn, usedKeys, handleKeyUp } = useWordle(solution);
+    const { currentGuess, guesses, isCorrect, turn, usedKeys, notInWordList, handleKeyUp } = useWordle(solution);
     const [showModal, setShowModal] = useState(false)
+
 
     useEffect(() => {
         window.addEventListener("keyup", handleKeyUp)
@@ -25,6 +26,9 @@ export default function Wordle({ solution }) {
     return (
         <div className="game">
             <h1>Wordle</h1>
+
+            {notInWordList && <Toast />}
+
             <div className="board" >
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
             </div>

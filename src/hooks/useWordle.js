@@ -1,4 +1,5 @@
 import { useState } from "react"
+import data from "../data/db.json"
 
 const useWordle = (solution) => {
 
@@ -8,6 +9,7 @@ const useWordle = (solution) => {
     const [history, setHistory] = useState([]) // each guess is a string
     const [isCorrect, setIsCorrect] = useState(false)
     const [usedKeys, setUsedKeys] = useState({})
+    const [notInWordList, setNotInWordList] = useState(false)
 
     // Format key with color green, yellow, grey
     const formatGuess = () => {
@@ -67,6 +69,12 @@ const useWordle = (solution) => {
     }
     const handleKeyUp = ({ key }) => {
         if (key === 'Enter') {
+            // check if guess is in the word list
+            if (!data.solutions.map((s) => s.word).includes(currentGuess)) {
+                console.log("invalid word")
+                setNotInWordList(true)
+                return
+            }
             // only add guess when current guess is less then 5
             if (turn > 5) {
                 console.log("you used all your guesses")
@@ -85,6 +93,7 @@ const useWordle = (solution) => {
             addNewGuess(formatGuess())
         }
         if (key === "Backspace") {
+            setNotInWordList(false)
             setCurrentGuess((prev) => {
                 return prev.slice(0, -1)
             })
@@ -98,6 +107,6 @@ const useWordle = (solution) => {
             }
         }
     }
-    return { turn, currentGuess, guesses, isCorrect, usedKeys, handleKeyUp }
+    return { turn, currentGuess, guesses, isCorrect, usedKeys, notInWordList, handleKeyUp }
 }
 export default useWordle
