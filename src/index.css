@@ -159,35 +159,47 @@ h1 {
 }
 
 .keyboard {
+
+  text-align: center;
+  font-size: 14px;
   font-family: sans-serif;
-  flex-shrink: 0;
 }
 
 .keyboard__row {
-  display: flex;
-  height: 3.5em;
-  margin: 2px;
+
+  display: inline-flex;
+  height: 3em;
+  margin: 0.2em;
 }
 
 .keyboard__row>* {
   position: relative;
   background: #d3d6da;
+  text-align: center;
   color: #333;
   float: left;
   border-radius: 0.3em;
-  margin: 2px;
-  padding: 2px;
-  width: 40px;
+  margin: 0.2em;
+  padding: 0.2em;
+  width: 3em;
   height: 100%;
   box-sizing: border-box;
   cursor: pointer;
-  text-transform: uppercase;
-  border: 0;
   -webkit-user-select: none;
+  border: 0;
+  text-transform: uppercase;
 }
 
 .key--w3 {
   width: 4.6em;
+}
+
+.key--letter {
+  line-height: 2.8em;
+}
+
+.keyboard>.keyboard__row {
+  text-align: center;
 }
 
 .keyboard__row>button.green {
