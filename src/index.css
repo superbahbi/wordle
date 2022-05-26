@@ -18,16 +18,16 @@ h1 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-betwee;
+  justify-content: space-between;
   height: 100vh;
 }
 
 .board {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .row {
@@ -159,10 +159,10 @@ h1 {
 }
 
 .keyboard {
-
   text-align: center;
   font-size: 14px;
   font-family: sans-serif;
+  margin-bottom: 10px;
 }
 
 .keyboard__row {

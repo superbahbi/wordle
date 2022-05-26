@@ -25,15 +25,16 @@ export default function Wordle({ solution }) {
 
     return (
         <div className="game">
-            <h1>Wordle</h1>
-
-            {notInWordList && <Toast />}
-
+            <div>
+                <h1>Wordle</h1>
+            </div>
             <div className="board" >
                 <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
             </div>
-
-            <Keypad usedKeys={usedKeys} onClick={(key) => handleKeyUp({ key })} />
+            <div>
+                <Keypad usedKeys={usedKeys} onClick={(key) => handleKeyUp({ key })} />
+            </div>
+            {notInWordList && <Toast />}
             {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
         </div>
     )
