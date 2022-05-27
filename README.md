@@ -108,18 +108,18 @@ This is an example of how to list things you need to use the software and how to
 ### Installation
 
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/superbahbi/wordle.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
- 3. Run 
- ```sh
- npm start
- ```
+  1. Clone the repo
+    ```sh
+      git clone https://github.com/superbahbi/wordle.git
+    ```
+  2. Install NPM packages
+    ```sh
+      npm install
+    ```
+  3. Run 
+    ```sh
+      npm start
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -159,10 +159,6 @@ Bobby Kugler- [@bahbilee](https://twitter.com/bahbilee) - bahbi@bahbi.net
 Project Link: [https://github.com/superbahbi/wordle](https://github.com/superbahbi/wordle)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
