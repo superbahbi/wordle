@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/superbahbi/Wordle">
+  <a href="https://github.com/superbahbi/wordle">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -43,9 +43,9 @@
     <br />
     <a href="https://wordle.bahbi.net/">View Demo</a>
     ·
-    <a href="https://github.com/superbahbi/Wordle/issues">Report Bug</a>
+    <a href="https://github.com/superbahbi/wordle/issues">Report Bug</a>
     ·
-    <a href="https://github.com/superbahbi/Wordle/issues">Request Feature</a>
+    <a href="https://github.com/superbahbi/wordle/issues">Request Feature</a>
   </p>
 </div>
 
@@ -117,7 +117,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/superbahbi/Wordle.git
+   git clone https://github.com/superbahbi/wordle.git
    ```
 2. Install NPM packages
    ```sh
@@ -170,7 +170,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Bobby Kugler- [@twitter_handle](https://twitter.com/bahbilee) - bahbi@bahbi.net
 
-Project Link: [https://github.com/superbahbi/Wordle](https://github.com/superbahbi/Wordle)
+Project Link: [https://github.com/superbahbi/wordle](https://github.com/superbahbi/wordle)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
