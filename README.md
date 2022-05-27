@@ -79,9 +79,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<div>
-  <img align="right" src="https://user-images.githubusercontent.com/1689092/170627126-4efcbd94-74d6-4b1b-b6b6-d532843d35e1.png">
+<div align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/1689092/170627126-4efcbd94-74d6-4b1b-b6b6-d532843d35e1.pn">
 </div>
+
 ### Built With
 
 * [React.js](https://reactjs.org/)
