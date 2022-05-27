@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/superbahbi/wordle">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://user-images.githubusercontent.com/1689092/170627505-f696ba78-7d63-4c6c-afbb-4dacee5ab47c.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Wordle</h3>
